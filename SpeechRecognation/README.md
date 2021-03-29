@@ -5,8 +5,8 @@
 
 	<h3>Speech Recognation<i>~Python</i><h3>
 
-![devices](https://github.com/ianSurii/100DaysOfCodeProjects/tree/master/SpeechRecognition/devices.png)
-![speech](https://github.com/ianSurii/100DaysOfCodeProjects/tree/master/SpeechRecognition/speech.png)
+![devices](https://github.com/ianSurii/100DaysOfCodeProjects/blob/master/SpeechRecognation/devices.png)
+![speech](https://github.com/ianSurii/100DaysOfCodeProjects/blob/master/SpeechRecognation/speech.png)
 
 
 </blockquote>
