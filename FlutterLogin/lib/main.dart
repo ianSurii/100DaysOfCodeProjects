@@ -10,8 +10,8 @@ class MyApp extends StatelessWidget{
       debugShowCheckedModeBanner: false,
       title: '#100DaysOfCodeLogin',
       theme: ThemeData(
-        primaryColor: Colors.blue,
-        scaffoldBackgroundColor:Colors.white,
+        primaryColor: Colors.blueAccent,
+        scaffoldBackgroundColor:Colors.blueAccent,
 
       ),
       home:Login(),
