@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
+// import 'package:flutter/services.dart';
 
  class Login extends StatelessWidget{
 
@@ -39,178 +40,134 @@ class Body extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     Size size = MediaQuery.of(context).size;
+return Scaffold(
+  body:  SafeArea(
 
-// _BodyController =controll
-    return Scaffold(
-      // appBar: AppBar(
-      //   title: Text('Sample App'),
-      //   backgroundColor:Colors.blueAccent,
-      //
-      //   // child:TextField(
-      //   //
-      //   ),
-        // TextField()
-      body: Padding(
-        padding: EdgeInsets.only(
-            top:size.height*0.1),
-        child: Stack(
-          children:<Widget> [
-            Container(
-              width: size.width,
-              height: size.height*0.1,
-              child: Text("TOURER",
-                style: TextStyle(
-                  fontSize:30.0,
-                  fontWeight: FontWeight.bold,
-                  color:Colors.white,
-                ),
-                textAlign: TextAlign.center,
+    child: Column(
 
-              ),
-            ),
+       
+        children: <Widget>[
 
-            Container(
-              padding: EdgeInsets.only(
-                  top:size.height*0.1),
-              width: double.infinity,
-              height: size.height,
-              margin: EdgeInsets.only(
-                top:size.height*0.05,
-                left: 10.0,
-                right:10.0,
-                bottom: size.height*0.07,
-              ),
 
-              decoration: BoxDecoration(
-                  color:Colors.white,
-                  borderRadius: BorderRadius.all(Radius.circular(15.0))
-              ),
-              child: Stack(
-
-              children: <Widget>[
+          Expanded(
+            flex: 1,
+            child: Column(
+              children: [
                 Container(
 
+                padding: EdgeInsets.all(30),
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color:Colors.transparent,
+                ),
 
-                  width: size.width,
-                  height:double.infinity,
 
-                  child: Text("LOGIN",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
 
-                    fontSize:25.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.blueAccent,
 
-                  ),
+                    child: Text("TOURER",
+                      style: TextStyle(
+
+                        fontSize: 30,
+                        color:Colors.white ,
+                        fontWeight: FontWeight.bold,
+
+
+                      ),
+
+
+
                   ),
                 ),
                 Container(
-                  height: size.height*0.30,
-                  padding:EdgeInsets.only(
-                      top:30.0,
-                      left:10.0,
-                  ),
-                  child: Text("Username",
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-
-                      fontSize:15.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.blue,
-
-                    ),
-                  ),
-
-                ),
-                Container(
+                  padding: EdgeInsets.all(30),
                   alignment: Alignment.center,
-                  padding: EdgeInsets.all(0),
-                  width:size.width,
-                  height: size.height*0.30,
-                  color: Colors.white60,
-                  child: TextField(
+                  decoration: BoxDecoration(
+                    color:Colors.white,
 
-                     keyboardType: TextInputType.emailAddress,
-                      cursorColor:Colors.red,
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20),
+                          topRight: Radius.circular(20)
+
+                      ),
+                  ),
+
+
+                  child:   TextField(
+
+                    obscureText: true,
+
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'User Name',
+                      labelText: 'Username',
                     ),
 
                   ),
+
+
+
                 ),
 
-
-                // Container(
-                //   height: size.height*0.30,
-                //   padding:EdgeInsets.only(
-                //     top:size.height*0.01,
-                //     left:10.0,
-                //   ),
-                //   child: Text("Password",
-                //     textAlign: TextAlign.left,
-                //     style: TextStyle(
-                //
-                //       fontSize:15.0,
-                //       fontWeight: FontWeight.bold,
-                //       color: Colors.blue,
-                //
-                //     ),
-                //   ),
-                //
-                // ),
                 Container(
+                  padding: EdgeInsets.all(30),
                   alignment: Alignment.center,
-                  padding: EdgeInsets.only(
-                    top:size.height*0.01,
-                    left:10,
-                    right:10,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                      bottomRight: Radius.circular(20),
+                        bottomLeft: Radius.circular(20)
 
+                    ),
+                    color:Colors.white,
                   ),
-                  width:size.width,
-                  height: double.infinity,
-                  color: Colors.white60,
-                  child: TextField(
 
-                    keyboardType: TextInputType.visiblePassword,
-                    cursorColor:Colors.red,
+
+                  child:   TextField(
+
+                    obscureText: true,
+
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Password',
                     ),
-
                   ),
-                )
 
 
 
+                ),
+                Container(
+                    height: 20,
+                    width:  size.width/2,
+                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30)
+                    ),
+                    child: RaisedButton(
+                      textColor: Colors.white,
+                      color: Colors.blue,
+                      child: Text('Login'),
+                      onPressed: () {
+                        // print(nameController.text);
+                        // print(passwordController.text);
+                      },
+                    )),
+                FlatButton(
+                  onPressed: (){
+                    //forgot password screen
+                  },
+                  textColor: Colors.white,
+                  child: Text('Forgot Password'),
+                ),
               ],
-
-              ),
-
-
-
             ),
-            Container(
-              child: RaisedButton(
-                textColor: Colors.white,
-                color: Colors.blue,
-                child: Text('Login'),
-                onPressed: () {
-                  Home();
-                  // var ;
-                  // print(.text);
-                  // print(passwordController.text);
-                },
-              ),
-            )
-          ],
+          ),
 
 
-    ),
-    ),
-    );
+        ],
+      ),
+  ),
+
+
+
+);
 
   }
 
