@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Ian Surii</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+               background:blue; 
+             
+            }
+            .centre_menu{
+                width: 70%;
+                word-spacing: 100px;
+                float: left;
+                text-align: center;
+                
+            }
+            a{
+                text-decoration: none;
+            }
+           
+            @media only screen and (max-width: 600px) {
+                body {
+                  background-color: lightblue;
+                }
+              
+             .centre_menu{
+               
+                visibility: hidden;
+                
+                
+            }
+            
+              }
+              @media only screen and (device-width:90000px;) {
+              
+            .right_menu{
+                visibility: visible;
+               
+                }
+              }
+                
+            
+            a:hover{
+                color:white;
+                
+                border-bottom: solid white;
+                /*border-bottom-color: white;*/ 
+               
+                
+            }
+            .left_menu{
+                width: auto;
+                float:left;
+                text-align: left;
+                
+            }
+            .right_menu{
+                color:white;
+                text-align: right;
+                float: right;
+                width: auto;
+                visibility: hidden;
+                
+            }
+            
+            </style>
+        
+    </head>
+    <body>
+        <div class="menu">
+            <div class="left_menu">
+                
+                 <a href="">Home</a>
+            </div>
+            <div class="centre_menu">
+                
+                <a href="">HOME</a>
+                <a href="">PROJECTS</a>
+                <a href="">ABOUT</a>
+                <a href="">BLOG</a>
+                <a href="">CONTACT</a>
+            </div>
+            <div class="right_menu">
+                <a href="">RIGHT</a>
+                
+            </div>
+           
+            
+        </div>
+    </body>
+</html>
